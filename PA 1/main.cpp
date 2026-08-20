@@ -42,8 +42,13 @@ int main() {
 
   sponsor1.setAmount(1200.56);
 
-  sponsor2.displayInfo();
-  sponsor1.displayInfo();
+  //sponsor2.displayInfo();
+  //sponsor1.displayInfo();
+
+  for (int i = 0; i < sponsorCount; i++)
+  {
+    sponsorList[i].displayInfo();
+  }
 
   delete [] sponsorList;
 

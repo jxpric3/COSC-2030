@@ -95,5 +95,17 @@ bool Sponsor::isBigDonor()
 
 void Sponsor::displayInfo()
 {
-  cout << name << "\t" << amount << endl;
+  cout << "*****************************************" << endl;
+  cout << name << endl;
+  cout << city << endl;
+  for(int i = 0; i < numDonations; i++)
+  {
+    cout << donations[i] << " ";
+    
+  }
+    cout << endl;  
+    cout << "Total Donations: " << amount << endl;
+
+    cout << "*****************************************" << endl;
+
 }
