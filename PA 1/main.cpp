@@ -5,6 +5,8 @@ using namespace std;
 int main() {
 
   int sponsorCount = 0; 
+  string sponsorName;
+  string sponsorCity;
 
   cout << "How many sponsors are there: "; 
   cin >> sponsorCount; 
@@ -13,6 +15,13 @@ int main() {
 
   for(int i = 0; i < sponsorCount; i++)
   {
+    cout << "Enter the name of sponsor " << i + 1 << ": ";
+    cin >> sponsorName;
+    sponsorList[i].setName(sponsorName);
+
+    cout << "City where " << sponsorName << " lives: ";
+    cin >> sponsorCity;
+    sponsorList[i].setCity(sponsorCity);
     
   }
 
