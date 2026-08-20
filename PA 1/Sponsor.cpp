@@ -3,6 +3,15 @@
 #include <cstdlib>
 using namespace std;
 
+Sponsor::Sponsor()
+{
+  name = "";
+  city = "";
+  amount = 0.0;
+  numDonations = 0; 
+  donations = nullptr; 
+}
+
 Sponsor::Sponsor(string n)
 {
   name = n;
@@ -15,12 +24,17 @@ Sponsor::Sponsor(string n, double a)
   amount = a;
 }
 
+Sponsor::~Sponsor()
+{
+  delete [] donations; 
+}
+
 double Sponsor::getAmount()
 {
   return amount;
 }
 
-double donation(double amount)
+void Sponsor::donation(double amount)
 {
   int newArraySize = numDonations + 1; 
   
@@ -28,14 +42,14 @@ double donation(double amount)
 
   for(int i = 0; i < numDonations; i++)
   {
-    tempArray[i] = donationHistory[i];
+    tempArray[i] = donations[i];
   }
 
   tempArray[newArraySize -1] = amount; 
 
-  delete [] donationHistory; 
+  delete [] donations; 
 
-  donationHistory = tempArray; 
+  donations = tempArray; 
 }
 
 string Sponsor::getName()
@@ -51,6 +65,11 @@ void Sponsor::setName(string n)
 void Sponsor::setAmount(double a)
 {
   amount = a;
+}
+
+void Sponsor::setCity(string c)
+{
+  city = c;
 }
 
 bool Sponsor::isBigDonor()

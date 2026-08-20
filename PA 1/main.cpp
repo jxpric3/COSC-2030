@@ -32,4 +32,6 @@ int main() {
 
   sponsor2.displayInfo();
   sponsor1.displayInfo();
+
+  return 0;
 }

@@ -14,16 +14,21 @@ class Sponsor
     string city; 
     double amount;
     int numDonations; 
-    double *donationHistory; 
+    double* donations; 
   
   public:
+    Sponsor(); //default constructor
     Sponsor(string, double);
     Sponsor(string);
+    ~Sponsor();
+
     void setName(string);
+    void setCity(string);
     void setAmount(double);
     string getName();
+    string getCity();
     double getAmount();
-    double donation(double);
+    void donation(double);
     bool isBigDonor(); 
     void displayInfo(); 
 };
