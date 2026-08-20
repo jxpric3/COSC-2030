@@ -38,7 +38,7 @@ double Sponsor::getAmount()
   return amount;
 }
 
-void Sponsor::donation(double amount)
+void Sponsor::donation(double donoAmount)
 {
   int newArraySize = numDonations + 1; 
   
@@ -49,7 +49,8 @@ void Sponsor::donation(double amount)
     tempArray[i] = donations[i];
   }
 
-  tempArray[newArraySize -1] = amount; 
+  tempArray[newArraySize -1] = donoAmount; 
+  amount += donoAmount;
 
   delete [] donations; 
 
