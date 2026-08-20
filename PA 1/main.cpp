@@ -5,8 +5,10 @@ using namespace std;
 int main() {
 
   int sponsorCount = 0; 
+  double donationAmount = 0.0;
   string sponsorName;
   string sponsorCity;
+
 
   cout << "How many sponsors are there: "; 
   cin >> sponsorCount; 
@@ -22,7 +24,17 @@ int main() {
     cout << "City where " << sponsorName << " lives: ";
     cin >> sponsorCity;
     sponsorList[i].setCity(sponsorCity);
-    
+
+    do
+    {
+      cout << "Enter donation, enter 0 when done: ";
+      cin >> donationAmount;
+      if (donationAmount != 0)
+      {
+        sponsorList[i].donation(donationAmount);
+      }
+    } while (donationAmount > 0);
+
   }
 
   Sponsor sponsor1("Josie Bigspender");
