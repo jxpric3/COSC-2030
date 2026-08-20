@@ -1,4 +1,4 @@
-code #include <iostream>
+#include <iostream>
 #include "Sponsor.h"
 using namespace std; 
 
@@ -32,4 +32,6 @@ int main() {
 
   sponsor2.displayInfo();
   sponsor1.displayInfo();
+
+  return 0;
 }

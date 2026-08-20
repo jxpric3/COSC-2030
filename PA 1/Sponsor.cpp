@@ -3,6 +3,15 @@
 #include <cstdlib>
 using namespace std;
 
+Sponsor::Sponsor()
+{
+  name = "";
+  city = "";
+  amount = 0.0;
+  numDonations = 0; 
+  donations = nullptr; 
+}
+
 Sponsor::Sponsor(string n)
 {
   name = n;
@@ -15,12 +24,17 @@ Sponsor::Sponsor(string n, double a)
   amount = a;
 }
 
+Sponsor::~Sponsor()
+{
+  delete [] donations; 
+}
+
 double Sponsor::getAmount()
 {
   return amount;
 }
 
-double Sponsor::donation(double amount)
+void Sponsor::donation(double amount)
 {
   int newArraySize = numDonations + 1; 
   

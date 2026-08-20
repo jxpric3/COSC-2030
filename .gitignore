@@ -1,0 +1,14 @@
+# Compiled objects & binaries — this repo is source-only
+*.o
+*.obj
+*.exe
+*.out
+a.out
+build/
+out/
+
+# Extension-less compiled binaries (compile into build/ to keep them ignored)
+PA 1/Donations
+
+# Editor config — local to one machine, not part of the coursework.
+.vscode/
