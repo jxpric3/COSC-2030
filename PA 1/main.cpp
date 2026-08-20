@@ -29,7 +29,7 @@ int main() {
     {
       cout << "Enter donation, enter 0 when done: ";
       cin >> donationAmount;
-      if (donationAmount != 0)
+      if (donationAmount > 0)
       {
         sponsorList[i].donation(donationAmount);
       }
@@ -44,6 +44,8 @@ int main() {
 
   sponsor2.displayInfo();
   sponsor1.displayInfo();
+
+  delete [] sponsorList;
 
   return 0;
 }
