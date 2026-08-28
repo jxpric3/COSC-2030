@@ -43,7 +43,16 @@ int main() {
         cout << endl;
     }
 
+    lines.push_back("Total number of spaces: " + to_string(spaceCount));
+
     cout << "Total number of spaces: " << spaceCount << endl;   
+
+    ofstream outputFile(filename);
+
+    outputFile << "Total number of spaces: " << spaceCount << endl;
+    outputFile.close();
+    
+
 
     return 0;
 }
