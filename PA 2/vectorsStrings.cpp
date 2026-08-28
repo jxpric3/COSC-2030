@@ -10,6 +10,8 @@ int main() {
     string line;
     vector<string> lines;
 
+    int spaceCount = 0;
+
     cout << "Enter the name of the file to read: ";
     getline(cin, filename);
 
@@ -28,6 +30,29 @@ int main() {
     }
 
     inputFile.close();
+
+    for(int i = 0; i < lines.size(); i++)
+    {
+        for(int j = 0; j < lines[i].size(); j++)
+        {
+            char testChar = lines[i][j];
+            
+            if(isspace(testChar))
+                spaceCount++;
+        }
+        cout << endl;
+    }
+
+    lines.push_back("Total number of spaces: " + to_string(spaceCount));
+
+    cout << "Total number of spaces: " << spaceCount << endl;   
+
+    ofstream outputFile(filename);
+
+    outputFile << "Total number of spaces: " << spaceCount << endl;
+    outputFile.close();
+    
+
 
     return 0;
 }
