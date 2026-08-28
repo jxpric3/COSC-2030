@@ -2,6 +2,11 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <cctype>
+#include <thread>
+#include <chrono>
+#include <omp.h>
+
 
 using namespace std;
 
@@ -30,7 +35,10 @@ int main() {
     }
 
     inputFile.close();
-
+    
+    //parellelize the loop using OpenMP here? 
+    //compiler note: g++ -fopenmp vectorsStrings.cpp -o vectorsStrings
+    
     for(int i = 0; i < lines.size(); i++)
     {
         for(int j = 0; j < lines[i].size(); j++)
@@ -47,11 +55,11 @@ int main() {
 
     cout << "Total number of spaces: " << spaceCount << endl;   
 
-    ofstream outputFile(filename);
+    ofstream outputFile(filename, ios::app);
 
     outputFile << "Total number of spaces: " << spaceCount << endl;
     outputFile.close();
-    
+
 
 
     return 0;
