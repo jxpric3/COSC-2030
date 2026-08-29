@@ -44,6 +44,7 @@ int main() {
     #pragma omp parallel for
     for(int i = 0; i < lines.size(); i++)
     {
+        int spaceCount = 0;
         for(int j = 0; j < lines[i].size(); j++)
         {
             char testChar = lines[i][j];
@@ -51,23 +52,16 @@ int main() {
             if(isspace(testChar))
                 spaceCount++;
         }
+
+        lines[i] += "Total number of spaces in line " + to_string(i+1) + ": " + to_string(spaceCount);
         
     }
 
-    lines.push_back("Total number of spaces: " + to_string(spaceCount));
 
     auto end = chrono::steady_clock::now();
     auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
 
-    cout << "Total number of spaces: " << spaceCount << endl;   
-    cout << "Time taken to count spaces: " << duration.count() << " milliseconds" << endl;
-
-    ofstream outputFile(filename, ios::app);
-
-    outputFile << endl;
-    outputFile << "Total number of spaces: " << spaceCount << endl;
-    outputFile << "Time taken to count spaces: " << duration.count() << " milliseconds" << endl;
-    outputFile.close();
+    cout << "Time taken to read and process the file: " << duration.count() << " milliseconds" << endl;
 
 
 
