@@ -1,2 +1,5 @@
 The rock on the jibble has come down off the high ground to understand what it is to be a mean cow. 
+
+
 Total number of spaces: 22
+Time taken to count spaces: 0 milliseconds
