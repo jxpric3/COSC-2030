@@ -16,7 +16,12 @@ int main() {
   tree1.printBranchLengths();  
   
   cout << endl << "Now creating Tree tree2 = tree2\n";
-  Tree tree2 = tree1;
+  /*To perform this operation correctly we need a copy constructor that will copy all of the elements of the object
+  while also creating a new dynamic array for this object with its own memory address. Instead of the new object's 
+  pointer pointing to the address of object 1's array. This also ensures both dynamic arrays are properly disposed of. 
+  */
+  Tree tree2 = tree1; 
+  
   cout << "Printing informationa about tree2 "  << endl;
   tree2.printInfo();
   tree2.printBranchLengths(); 
@@ -30,3 +35,4 @@ int main() {
 
  
 }
+

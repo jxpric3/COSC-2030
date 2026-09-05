@@ -31,6 +31,14 @@ public:
   Tree()
   {branches = 1; rootLength = 0.0; height = 0.0; createBranchLengths();}
 
+  //copy constructor
+   Tree(Tree &newTree)
+   {
+    branches = newTree.branches; 
+    rootLength = newTree.rootLength;
+    height = newTree.height; 
+    createBranchLengths(); 
+   }
 
   ~Tree()
   { delete [] branchLengths; }
