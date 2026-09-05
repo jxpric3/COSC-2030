@@ -23,4 +23,26 @@ void Tree::printBranchLengths()
     cout << endl; 
 }
 
+//object count 
+int Tree::getTreeObjectCount() const
+{
+  return treeObjectCount; 
+}
 
+friend double branchMutation(Tree &treeObject)
+{
+  double newSum = 0; 
+
+  for(int i = 0; i < treeObject.branches; i++)
+  {
+    treeObject.branchLengths[i] += 1.0; 
+    newSum += treeObject.branchLengths[i];
+
+  }
+  return newSum; 
+
+
+    
+}
+
+int Tree::treeObjectCount = 0;
