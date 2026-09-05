@@ -8,15 +8,11 @@ using namespace std;
 
 class Tree
 {
-  //friend function 
-  friend double branchMutation(Tree &treeObject); 
 private:
-   static int treeObjectCount; //static variable for keeping count of tree objects. 
    int branches;
    double rootLength;
    double height; 
    double *branchLengths;
-
 
    void createBranchLengths()
    {
@@ -25,34 +21,19 @@ private:
        branchLengths[i] = 0.0;  
    }
 
- 
-
 
 public:
    // Constructor
   Tree(int b, double f, double h )
-  { treeObjectCount++; branches = b; rootLength = f; height = h; createBranchLengths(); }
+  { branches = b; rootLength = f; height = h; createBranchLengths();}
 
   // Default Constructor
   Tree()
-  {treeObjectCount++; branches = 1; rootLength = 0.0; height = 0.0; createBranchLengths(); }
+  {branches = 1; rootLength = 0.0; height = 0.0; createBranchLengths();}
 
-  //copy constructor
-   Tree(const Tree &newTree)
-  {
-    treeObjectCount++;
-    branches = newTree.branches; 
-    rootLength = newTree.rootLength;
-    height = newTree.height; 
-    createBranchLengths(); 
-
-    for(int i = 0; i < branches; i++){
-      branchLengths[i] = newTree.branchLengths[i]; 
-      }
-  }
 
   ~Tree()
-  { delete [] branchLengths; treeObjectCount--;}
+  { delete [] branchLengths; }
       
   void setBranches(int n)
   { branches = n; }
@@ -75,12 +56,7 @@ public:
   void printInfo();  
   void printBranchLengths();
 
-  int getTreeObjectCount() const; //function for retrieving the count of tree objects. 
-
-  
-
 };
 
- 
 
-#endif
+#endif  
