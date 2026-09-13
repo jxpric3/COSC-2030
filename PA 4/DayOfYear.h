@@ -11,6 +11,11 @@ class DayOfYear
         static const string monthNames[12]; 
 
     public: 
-        void printInfo(int dayInput); 
+        DayOfYear (int dayOfYear);
 
-}
+        void printInfo() const; 
+
+
+};
+
+#endif  
