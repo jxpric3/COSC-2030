@@ -37,3 +37,33 @@ double ParkingTicket::calculateFine(int meterMinutes) const
     
 }
 
+string ParkingTicket::getCarMake() const
+{
+    return ticketCar.getCarMake();
+}
+
+string ParkingTicket::getCarModel() const
+{
+    return ticketCar.getCarModel();
+}
+
+string ParkingTicket::getCarColor() const
+{
+    return ticketCar.getCarColor();
+}
+
+string ParkingTicket::getCarLicense() const
+{
+    return ticketCar.getCarLicense();
+}
+
+string ParkingTicket::getOfficerName() const
+{
+    return ticketOfficer.getName();
+}
+
+int ParkingTicket::getOfficerBadgeNumber() const
+{
+    return ticketOfficer.getBadgeNumber();
+}
+
