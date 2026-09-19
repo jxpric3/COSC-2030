@@ -15,10 +15,12 @@ private:
     int badgeNumber;
 
 public:
+    
+    PoliceOfficer();
     PoliceOfficer(string name, int badge);
 
-    void setName(string);
-    void setBadgeNumber(int);
+    void setName(string o_name);
+    void setBadgeNumber(int b_num);
 
     string getName() const;
     int getBadgeNumber() const;

@@ -1,11 +1,10 @@
 #include "ParkedCar.h"
-#include <iostream> 
 
 using namespace std; 
 
 ParkedCar::ParkedCar()
 {
-https://mail.google.com/mail/u/0/#inbox    minutesParked = 0;  
+    minutesParked = 0;  
 }
 
 ParkedCar::ParkedCar(string make, string model, string color, string license, int minutes)
@@ -57,6 +56,11 @@ string ParkedCar::getCarModel() const
 string ParkedCar::getCarColor() const
 {
     return carColor; 
+}
+
+string ParkedCar::getCarLicense() const
+{
+    return carLicenseNumber; 
 }
 
 int ParkedCar::getMinutesParked() const 
