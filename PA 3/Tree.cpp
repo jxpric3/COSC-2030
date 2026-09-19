@@ -36,7 +36,7 @@ double branchMutation(Tree &treeObject)
 
   for(int i = 0; i < branchCount; i++)
   {
-    treeObject.branchLengths[i] += 1.0; 
+    treeObject.branchLengths[i] += 1.0; r
     newSum += treeObject.branchLengths[i];
 
   }
