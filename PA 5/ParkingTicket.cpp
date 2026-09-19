@@ -25,13 +25,13 @@ double ParkingTicket::calculateFine(int meterMinutes) const
     {
         int measuredMinutes = meterMinutes - 60; 
 
-        if (measuredMinutes / 60 == 0)
+        if (measuredMinutes % 60 > 0)
         {
-            return firstHourRate + ((measuredMinutes / 60) * additionalHourRate);
+            return firstHourRate + (((measuredMinutes / 60) * additionalHourRate) + additionalHourRate);
         }
         else
         {
-            return firstHourRate + (((measuredMinutes / 60) * additionalHourRate) + additionalHourRate);
+            return ((measuredMinutes / 60) * additionalHourRate);
         }
     }
     
