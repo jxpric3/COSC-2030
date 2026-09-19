@@ -28,7 +28,7 @@ public:
     bool isTimeExpired(const ParkedCar &, const ParkingMeter &) const; 
 
 
-    ParkingTicket createTicket(const ParkedCar &) const;
+    ParkingTicket createTicket(const ParkedCar &, int meterMinutes) const;
 
 
 };

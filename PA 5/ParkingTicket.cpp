@@ -9,10 +9,15 @@ const double ParkingTicket::additionalHourRate = 10.00;
 
 
 
-ParkingTicket::ParkingTicket(const ParkedCar &car, const PoliceOfficer &officer)
+
+
+
+ParkingTicket::ParkingTicket(const ParkedCar &car, const PoliceOfficer &officer, int meterMinutes)
 {
     ticketCar = car; 
     ticketOfficer = officer; 
+
+    fineAmount = calculateFine(meterMinutes);
 }
 
 double ParkingTicket::calculateFine(int meterMinutes) const
@@ -67,5 +72,11 @@ string ParkingTicket::getOfficerName() const
 int ParkingTicket::getOfficerBadgeNumber() const
 {
     return ticketOfficer.getBadgeNumber();
+
+}
+
+double ParkingTicket::getFineAmount() const
+{
+    return fineAmount;
 }
 

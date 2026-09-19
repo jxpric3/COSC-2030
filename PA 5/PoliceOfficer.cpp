@@ -40,8 +40,8 @@ bool PoliceOfficer::isTimeExpired(const ParkedCar &car, const ParkingMeter &mete
     return car.getMinutesParked() > meter.getMinutesPurchased(); 
 }
 
-ParkingTicket PoliceOfficer::createTicket(const ParkedCar &car) const
+ParkingTicket PoliceOfficer::createTicket(const ParkedCar &car, int meterMinutes) const
 {
-    return ParkingTicket(car, *this);
+    return ParkingTicket(car, *this, meterMinutes);
 
 }

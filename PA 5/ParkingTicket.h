@@ -14,15 +14,18 @@ class ParkingTicket
     private:
     static const double firstHourRate; 
     static const double additionalHourRate; 
+    double fineAmount; 
 
     ParkedCar ticketCar; 
     PoliceOfficer ticketOfficer; 
+    
+    double calculateFine(int meterMinutes) const;
 
 
     public: 
 
-    ParkingTicket(const ParkedCar &car, const PoliceOfficer &officer);
-    double calculateFine(int meterMinutes) const;
+    ParkingTicket(const ParkedCar &car, const PoliceOfficer &officer, int meterMinutes);
+    
 
     string getCarMake() const;
     string getCarModel() const;
@@ -31,6 +34,7 @@ class ParkingTicket
 
     string getOfficerName() const;
     int getOfficerBadgeNumber() const;
+    double getFineAmount() const; 
     
 };
 #endif
