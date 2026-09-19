@@ -17,21 +17,23 @@ ParkingTicket::ParkingTicket(const ParkedCar &car, const PoliceOfficer &officer)
 
 double ParkingTicket::calculateFine(int meterMinutes) const
 {
-    if (meterMinutes <= 60)
+    int totalOverage = ticketCar.getMinutesParked() - meterMinutes; 
+
+    if (totalOverage <= 60)
     {
         return firstHourRate; 
     }
     else
     {
-        int measuredMinutes = meterMinutes - 60; 
+        int measuredMinutes = totalOverage - 60; 
 
         if (measuredMinutes % 60 > 0)
         {
-            return firstHourRate + (((measuredMinutes / 60) * additionalHourRate) + additionalHourRate);
+            return firstHourRate + (((measuredMinutes / 60) * additionalHourRate) + additionalHourRate );
         }
         else
         {
-            return ((measuredMinutes / 60) * additionalHourRate);
+            return (((measuredMinutes / 60) * additionalHourRate) + firstHourRate);
         }
     }
     
