@@ -38,15 +38,47 @@ void Scenario::fightCalculation()
     }
 }
 
-string Scenario::getHitResult() const
-{
-    return hitResolution; 
-}
-
-
 
 int Scenario::getDiceRoll() const 
 {
     return diceRoll; 
+}
+
+
+string Scenario::getHitResult() const
+{
+    if(hitResolution) 
+    {
+        return "hit";
+    }
+    else 
+    {
+        return "miss";
+    }
+}
+
+int Scenario::getRawDamage() const 
+{
+    return rawDamage; 
+}
+
+int Scenario::getActualDamage() const
+{
+    return actualDamage; 
+}
+
+string Scenario::getPlayerName() const 
+{
+    return combatPlayer.getName(); 
+}
+
+string Scenario::getWeaponName() const
+{
+    return combatPlayer.getWeaponName(); 
+}
+
+string Scenario::getEnemyName() const
+{
+    return combatEnemy.getName();
 }
 
