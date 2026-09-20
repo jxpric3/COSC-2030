@@ -8,31 +8,31 @@ using namespace std;
 
 class Player 
 {
-    private: 
-    string playerName; 
-    string playerDungeonClass; 
-    int playerBaseAttackPower; 
-    Weapon equippedWeapon; 
+private: 
+string playerName; 
+string playerDungeonClass; 
+int playerBaseAttackPower; 
+Weapon equippedWeapon; 
 
-    public:
-    
-    Player();
-    Player(string charName, string dungeonClass, int baseAttack, const Weapon &weapon);
+public:
 
-    string getName() const; 
-    string getDungeonClass() const; 
-    int getBaseAttackPower() const; 
+Player();
+Player(string charName, string dungeonClass, int baseAttack, const Weapon &weapon);
 
-    int totalAttackPower() const; 
+string getName() const; 
+string getDungeonClass() const; 
+int getBaseAttackPower() const; 
 
-    int getWeaponDamage() const; 
-    string getWeaponDamageType() const; 
-    string getWeaponName() const; 
+int totalAttackPower() const; 
+
+int getWeaponDamage() const; 
+string getWeaponDamageType() const; 
+string getWeaponName() const; 
 
 
-    
 
-    
+
+
 };
 
 #endif
