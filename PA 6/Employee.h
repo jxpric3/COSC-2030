@@ -13,22 +13,22 @@ class Employee
         string employeeFirstName;
         string employeeLastName; 
         int employeeNumber; 
-        std::chrono::year_month_day hireDate; 
+        string hireDate; 
 
     public:
 
         Employee(); 
-        Employee(string firstName, string lastName, int e_number, std::chrono::year_month_day date);
+        Employee(string firstName, string lastName, int e_number, string date);
 
         void setEmployeeFirstName(string firstName); 
         void setEmployeeLastName(string lastName); 
         void setEmployeeNumber(int empNumber); 
-        void setemployeeHireDate(std::chrono::year_month_day date); 
+        void setemployeeHireDate(string date); 
 
         string getEmployeeFirstName(); 
         string getEmployeeLastName(); 
         int getEmployeeNumber(); 
-        std::chrono::year_month_day getEmployeeHireDate(); 
+        string getEmployeeHireDate(); 
 
 
 
