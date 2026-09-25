@@ -12,3 +12,6 @@ PA 1/Donations
 
 # Editor config — local to one machine, not part of the coursework.
 .vscode/
+
+# Personal Claude instructions — local only, never pushed
+CLAUDE.local.md
