@@ -7,7 +7,7 @@ using namespace std;
 
 Employee::Employee()
 {
-
+    employeeNumber = 0; 
 }
 
 Employee::Employee(string firstName, string lastName, int e_number, string date)

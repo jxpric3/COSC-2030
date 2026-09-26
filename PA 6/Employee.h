@@ -25,6 +25,9 @@ class Employee
         void setEmployeeNumber(int empNumber); 
         void setemployeeHireDate(string date); 
 
+        void printInfo();
+ 
+
         string getEmployeeFirstName(); 
         string getEmployeeLastName(); 
         int getEmployeeNumber(); 
