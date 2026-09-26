@@ -18,7 +18,7 @@ class ShiftSupervisor : public Employee
         ShiftSupervisor(); 
         ShiftSupervisor(string firstName, string lastName, int e_number, string date, double supeSalary, double annual); 
 
-    void setannualSalary(int salary);
+    void setannualSalary(double salary);
     void setAnnualBonus(double bonus);
 
     void printInfo(); 

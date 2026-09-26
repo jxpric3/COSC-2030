@@ -22,14 +22,17 @@ void ProductionWorker::printInfo()
     if(shift == 1)
     {
         cout << "Employee shift designation: Day Shift." << endl; 
-        cout << "Employee hourly payrate: $" << hourlyPayRate << endl; 
+        
     }
     else if(shift == 2)
     {
-        cout << "Employee shift designation: Day Shift." << endl; 
-        cout << "Employee hourly payrate: $" << hourlyPayRate << endl; 
+        cout << "Employee shift designation: Night Shift." << endl; 
      }
-    
+    else
+    {
+        cout << "Employee shift designation has not be classified for this employee." << endl;
+    } 
+    cout << "Employee hourly payrate: $" << hourlyPayRate << endl; 
 }
 
 void ProductionWorker::setShift(int empShift)

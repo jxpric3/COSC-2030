@@ -33,5 +33,12 @@ void ShiftSupervisor::printInfo()
     cout << "Supervisor Annual Production Bonus: $" <<  annualBonus << endl; 
 }
 
-    double getAnnualSalary();
-    double getAnnualBonus(); 
+double ShiftSupervisor::getAnnualSalary()
+{
+    return annualSalary;
+}
+
+double ShiftSupervisor::getAnnualBonus()
+{
+    return annualBonus; 
+}
