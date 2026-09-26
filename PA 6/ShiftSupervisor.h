@@ -19,7 +19,7 @@ class ShiftSupervisor : public Employee
         ShiftSupervisor(string firstName, string lastName, int e_number, string date, double supeSalary, double annual); 
 
     void setannualSalary(int salary);
-    void setPayRate(double bonus);
+    void setAnnualBonus(double bonus);
 
     void printInfo(); 
 
