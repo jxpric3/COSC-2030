@@ -2,7 +2,7 @@
 #define TEAMLEADER_H
 
 #include "ProductionWorker.h"
-
+#include <string>
 
 using namespace std;
 
@@ -17,21 +17,16 @@ class TeamLeader : public ProductionWorker
 
     TeamLeader(); 
 
-    TeamLeader(string firstName, string lastName, int e_number, string date, int empShift, double empPayRate, double bonus, int requiredHours) : ProductionWorker(firstName, lastName, e_number, date, empShift, empPayRate)
-    {
-        attendedTrainingHours = 0; 
-        requiredTrainingHours = requiredHours; 
-    }
-
+    TeamLeader(string firstName, string lastName, int e_number, string date, int empShift, double empPayRate, double bonus, int requiredHours);
     void setMonthlyBonus(double bonus);
     void setRequiredTrainingHours(int reqHours);
-    void setAttendedTrainingHours(int empPayRate); 
+    void setAttendedTrainingHours(int hours); 
 
     void printInfo(); 
 
     double getMonthlyBonus();
     int getRequiredTrainingHours();
-    int attendedTrainingHours(); 
+    int getAttendedTrainingHours(); 
 
      
 };
