@@ -21,6 +21,8 @@ class ProductionWorker : public Employee
     void setShift(int empShift);
     void setPayRate(double empPayRate); 
 
+    void printInfo(); 
+
     int getShift();
     double getEmployeePayRate(); 
 

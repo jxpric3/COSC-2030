@@ -1,6 +1,7 @@
 #include "ProductionWorker.h"
 
 #include <string> 
+#include <iostream>
 
 ProductionWorker::ProductionWorker()
 {
@@ -13,4 +14,20 @@ ProductionWorker::ProductionWorker(string firstName, string lastName, int e_numb
     shift = empShift; 
     hourlyPayRate = empPayRate; 
 
+}
+
+void ProductionWorker::printInfo()
+{
+    Employee::printInfo(); 
+    if(shift == 1)
+    {
+        cout << "Employee shift designation: Day Shift." << endl; 
+        cout << "Employee hourly payrate: $" << hourlyPayRate << endl; 
+    }
+    else if(shift == 2)
+    {
+        cout << "Employee shift designation: Day Shift." << endl; 
+        cout << "Employee hourly payrate: $" << hourlyPayRate << endl; 
+     }
+    
 }
