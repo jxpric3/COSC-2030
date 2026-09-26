@@ -8,7 +8,26 @@ using namespace std;
 
 class ShiftSupervisor : public Employee
 {
+    private:
 
-}:
+        double annualSalary;
+        double annualBonus; 
+
+    public:
+
+        ShiftSupervisor(); 
+        ShiftSupervisor(string firstName, string lastName, int e_number, string date, double supeSalary, double annual); 
+
+    void setannualSalary(int salary);
+    void setPayRate(double bonus);
+
+    void printInfo(); 
+
+    double getAnnualSalary();
+    double getAnnualBonus(); 
+
+
+
+};
 
 #endif

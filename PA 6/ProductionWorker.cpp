@@ -31,3 +31,23 @@ void ProductionWorker::printInfo()
      }
     
 }
+
+void ProductionWorker::setShift(int empShift)
+{
+    shift = empShift; 
+}
+void ProductionWorker::setPayRate(double empPayRate)
+{
+    hourlyPayRate = empPayRate; 
+}
+
+int ProductionWorker::getShift()
+{
+    return shift;
+}
+
+double ProductionWorker::getEmployeePayRate()
+{
+    return hourlyPayRate;
+}
+
