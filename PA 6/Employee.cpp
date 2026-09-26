@@ -7,7 +7,7 @@ using namespace std;
 
 Employee::Employee()
 {
-    
+
 }
 
 Employee::Employee(string firstName, string lastName, int e_number, string date)
@@ -35,6 +35,14 @@ void Employee::setemployeeHireDate(string date)
 {
     hireDate = date; 
 
+}
+
+void Employee::printInfo()
+{
+    cout << "Employee Information Summary" << endl; 
+    cout << "Name: " << employeeFirstName << ", " << employeeLastName << endl; 
+    cout << "Employee Number: " << employeeNumber << endl; 
+    cout << "Employee Hire Date: " << hireDate << endl; 
 }
 
 string Employee::getEmployeeFirstName()
