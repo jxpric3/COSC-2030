@@ -30,7 +30,7 @@ void ProductionWorker::printInfo()
      }
     else
     {
-        cout << "Employee shift designation has not be classified for this employee." << endl;
+        cout << "Employee shift designation has not been classified for this employee." << endl;
     } 
     cout << "Employee hourly payrate: $" << hourlyPayRate << endl; 
 }

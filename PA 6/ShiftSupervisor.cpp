@@ -15,7 +15,7 @@ ShiftSupervisor::ShiftSupervisor(string firstName, string lastName, int e_number
 
 }
 
-void ShiftSupervisor::setannualSalary(int salary)
+void ShiftSupervisor::setannualSalary(double salary)
 {
     annualSalary = salary; 
 }
