@@ -34,10 +34,13 @@ void TeamLeader::setAttendedTrainingHours(int hours)
 
 void TeamLeader::printInfo()
 {
+    cout << "**************************************************" << endl;
+    cout << endl; 
+    cout << "Employee Classification: Team Leader" << endl; 
     ProductionWorker::printInfo(); 
     cout << "The monthly Team Leader Bonus for employee: $" << monthlyBonus << endl;
     cout << "The required Team Leader Training hours for employee: " << requiredTrainingHours << endl; 
-    
+
 
 }
 

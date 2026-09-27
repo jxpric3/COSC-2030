@@ -18,6 +18,9 @@ ProductionWorker::ProductionWorker(string firstName, string lastName, int e_numb
 
 void ProductionWorker::printInfo()
 {
+    //cout << "**************************************************" << endl;
+    cout << endl; 
+    cout << "Employee Classification: Production Worker" << endl; 
     Employee::printInfo(); 
     if(shift == 1)
     {

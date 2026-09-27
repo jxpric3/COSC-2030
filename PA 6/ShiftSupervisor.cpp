@@ -28,6 +28,9 @@ void ShiftSupervisor::setAnnualBonus(double bonus)
 
 void ShiftSupervisor::printInfo()
 {
+    cout << "**************************************************" << endl;
+    cout << endl; 
+    cout << "Employee Classification: Shift Supervisor" << endl; 
     Employee::printInfo(); 
     cout << "Supervisor Annual Salary: $" << annualSalary << endl; 
     cout << "Supervisor Annual Production Bonus: $" <<  annualBonus << endl; 
