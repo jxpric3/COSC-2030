@@ -99,7 +99,17 @@ int main()
     cout << "**************************************************" << endl;
     cout << "Modifying the Team Leader Object" << endl; 
 
-    
+    cout << "The current monthly bonus for the Team Leader is: $" << myTeamLeader.getMonthlyBonus() << endl; 
+    myTeamLeader.setMonthlyBonus(8000.00); 
+    cout << "The monthly bonus for the Team Leader is now: $" << myTeamLeader.getMonthlyBonus() << endl; 
+    cout << "The current Required Training Hours for the Team Leader is: " << myTeamLeader.getRequiredTrainingHours() << endl; 
+    myTeamLeader.setRequiredTrainingHours(89);
+    cout << "The Required Training Hours for the Team Leader is now: " << myTeamLeader.getRequiredTrainingHours() << endl; 
+
+    cout << "The current Attended Training Hours for the Team Leader is: " << myTeamLeader.getAttendedTrainingHours() << endl; 
+    myTeamLeader.setAttendedTrainingHours(16);
+    cout << "The Attended Training Hours for the Team Leader is now: " << myTeamLeader.getAttendedTrainingHours() << endl; 
+
 
 
     return 0; 
