@@ -8,3 +8,19 @@ Rectangle::Rectangle(int long len, int long w)
 }
 
 
+int long Rectangle::getWidth()
+{
+    return width; 
+}
+
+int long Rectangle::getLength()
+{
+    return length; 
+}
+
+void Rectangle::calcArea(int long, int long)
+{
+    area = length * width; 
+}
+
+
