@@ -14,6 +14,9 @@ int main()
     cout << "Here is the calculated area of my fancy circle: " << myCircle.getArea() << endl; 
     cout << "Here is the calculated area of my fancy rectangle: " << myRectangle.getArea() << endl; 
 
+    Rectangle secondRectangle(); 
+
+    
     
     return 0; 
 

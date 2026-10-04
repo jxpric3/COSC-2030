@@ -12,7 +12,12 @@ class Rectangle : public BasicShape
     public: 
         Rectangle(); 
         Rectangle(int long, int long);
-        
+
+        class NegativeWidth{};
+        class NegativeLength{}; 
+
+        void setWidth(int long);
+        void setLength(int long); 
 
         int long getWidth();
         int long getLength();
