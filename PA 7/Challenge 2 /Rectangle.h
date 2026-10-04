@@ -23,6 +23,8 @@ class Rectangle : public BasicShape
         int long getLength();
 
         void calcArea(); 
+
+        void printInfo(); 
         
 
 }; 

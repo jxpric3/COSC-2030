@@ -1,4 +1,5 @@
 #include "Rectangle.h"
+#include <iostream>
 
 Rectangle::Rectangle()
 {
@@ -49,4 +50,10 @@ void Rectangle::calcArea()
     area = length * width; 
 }
 
+void Rectangle::printInfo()
+{
+    cout << "The Rectangle's width is: " << width << endl; 
+    cout << "The Rectangle's length is: " << length << endl; 
+    cout << "The Rectangle's calculated area is: " << area << endl; 
+}
 
