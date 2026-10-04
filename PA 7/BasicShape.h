@@ -16,7 +16,7 @@ class BasicShape{
     
     public: 
         double getArea(){return area;}
-        virtual void calcArea() const = 0; 
+        virtual void calcArea() = 0; 
 
 };
 

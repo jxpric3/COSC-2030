@@ -1,3 +1,4 @@
+#include "BasicShape.h"
 #include "Circle.h"
 
 Circle::Circle(int long x, int long y, double r)
@@ -6,7 +7,7 @@ Circle::Circle(int long x, int long y, double r)
     centerY = y; 
     radius = r; 
 
-    calcArea(radius); 
+    calcArea(); 
 }
 
 int long Circle::getCenterX()
@@ -19,9 +20,9 @@ int long Circle::getCenterY()
     return centerY; 
 }
 
-void Circle::calcArea(double r)
+void Circle::calcArea()
 {
-    area = r * r; 
+    area = radius * radius; 
 
 }
 
