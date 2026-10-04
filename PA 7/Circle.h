@@ -18,7 +18,7 @@ class Circle : public BasicShape
         int long getCenterX(); 
         int long getCenterY(); 
 
-        void calcArea(double); 
+        void calcArea(); 
 
 
 };

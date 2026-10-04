@@ -4,7 +4,7 @@ Rectangle::Rectangle(int long len, int long w)
 {
     length = len; 
     width = w; 
-    calcArea(length, width); 
+    calcArea(); 
 }
 
 
@@ -18,7 +18,7 @@ int long Rectangle::getLength()
     return length; 
 }
 
-void Rectangle::calcArea(int long, int long)
+void Rectangle::calcArea()
 {
     area = length * width; 
 }

@@ -15,7 +15,7 @@ class Rectangle : public BasicShape
         int long getWidth();
         int long getLength();
 
-        void calcArea(int long, int long); 
+        void calcArea(); 
         
 
 }; 
