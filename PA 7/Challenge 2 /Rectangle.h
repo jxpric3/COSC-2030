@@ -13,8 +13,8 @@ class Rectangle : public BasicShape
         Rectangle(); 
         Rectangle(int long, int long);
 
-        class NegativeWidth();
-        class NegativeLength(); 
+        class NegativeWidth{};
+        class NegativeLength{}; 
 
         void setWidth(int long);
         void setLength(int long); 
@@ -23,6 +23,8 @@ class Rectangle : public BasicShape
         int long getLength();
 
         void calcArea(); 
+
+        void printInfo(); 
         
 
 }; 

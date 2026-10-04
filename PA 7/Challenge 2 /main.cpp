@@ -1,4 +1,4 @@
-#include "Circle.h"
+
 #include "Rectangle.h"
 
 #include <iostream>
@@ -8,15 +8,37 @@ using namespace std;
 
 int main()
 {
-    Circle myCircle(6, 8, 4); 
-    Rectangle myRectangle(12,12);
+    int long length; 
+    int long width; 
+   
 
-    cout << "Here is the calculated area of my fancy circle: " << myCircle.getArea() << endl; 
-    cout << "Here is the calculated area of my fancy rectangle: " << myRectangle.getArea() << endl; 
+    Rectangle secondRectangle; 
 
-    Rectangle secondRectangle(); 
+    cout << "Please enter the value for your new Rectangle's length: "; 
+    cin >> length;
+    cout << "Please enter the value for your new Rectangle's width: "; 
+    cin >> width; 
+
+    try
+    {
+        secondRectangle.setLength(length);
+        secondRectangle.setWidth(width);
+    }
+    
+    catch(Rectangle::NegativeLength)
+    {
+        cout << "ERROR: A negative value was given for the rectangle's length." << endl; 
+
+    }
+
+    catch(Rectangle::NegativeWidth)
+    {
+        cout << "ERROR: A negative value was given for the rectangle's width." << endl; 
+
+    }
 
     
+
     
     return 0; 
 
