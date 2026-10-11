@@ -133,6 +133,9 @@ T SimpleVector<T>::getElementAt(int sub)
    return aptr[sub];
 }
 
+template <typename T> 
+T SimpleVector<T>::push_back
+
 //*******************************************************
 // Overloaded [] operator. The argument is a subscript. *
 // This function returns a reference to the element     *
@@ -146,4 +149,6 @@ T &SimpleVector<T>::operator[](const int &sub)
       subError();
    return aptr[sub];
 }
+
+
 #endif 
