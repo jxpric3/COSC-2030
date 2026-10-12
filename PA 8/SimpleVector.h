@@ -36,6 +36,13 @@ public:
    // Accessor to return a specific element
    T getElementAt(int position);
 
+   T push_back(T value);
+
+   T pop_back();
+
+   T max();
+
+
    // Overloaded [] operator declaration
    T &operator[](const int &);
 };
@@ -134,7 +141,71 @@ T SimpleVector<T>::getElementAt(int sub)
 }
 
 template <typename T> 
-T SimpleVector<T>::push_back
+T SimpleVector<T>::push_back(T value) {
+ arraySize = arraySize + 1;
+ T *temp;
+ try
+ {
+      temp = new T [arraySize];
+ }
+ catch (bad_alloc)
+ {
+      memError();
+ }
+
+ for(int count = 0; count < arraySize - 1; count++)
+      *(temp + count) = *(aptr + count);
+ *(temp + arraySize - 1) = value;
+ delete [] aptr;
+ aptr = temp;
+}
+
+template <typename T> 
+T SimpleVector<T>::pop_back() {
+
+ T capturedValue = aptr[arraySize - 1];
+ 
+ arraySize = arraySize - 1;
+
+ if(arraySize == 0){
+    delete [] aptr;
+    aptr = 0;
+    return capturedValue;
+ }
+
+ T *temp;
+ try
+ {
+      temp = new T [arraySize];
+ }
+ catch (bad_alloc)
+ {
+      memError();
+ }
+
+ for(int count = 0; count < arraySize; count++){
+      *(temp + count) = *(aptr + count);
+ }
+
+   delete [] aptr;
+
+   aptr = temp;
+
+   return capturedValue;
+}
+
+template <typename T> 
+T SimpleVector<T>::max() {
+   T maxValue = getElementAt(0);
+   for(int i = 1; i < arraySize; i++){
+      if(getElementAt(i) > maxValue){
+         maxValue = getElementAt(i);
+      }
+   }
+
+   return maxValue; 
+
+}
 
 //*******************************************************
 // Overloaded [] operator. The argument is a subscript. *
