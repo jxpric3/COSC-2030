@@ -36,7 +36,7 @@ public:
    // Accessor to return a specific element
    T getElementAt(int position);
 
-   T push_back(T value);
+   void push_back(T value);
 
    T pop_back();
 
@@ -141,7 +141,7 @@ T SimpleVector<T>::getElementAt(int sub)
 }
 
 template <typename T> 
-T SimpleVector<T>::push_back(T value) {
+void SimpleVector<T>::push_back(T value) {
  arraySize = arraySize + 1;
  T *temp;
  try
