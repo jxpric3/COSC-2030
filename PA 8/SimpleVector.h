@@ -36,9 +36,11 @@ public:
    // Accessor to return a specific element
    T getElementAt(int position);
 
-   T push_back(T value);
+   void push_back(T value);
 
    T pop_back();
+
+   T max();
 
 
    // Overloaded [] operator declaration
@@ -139,7 +141,7 @@ T SimpleVector<T>::getElementAt(int sub)
 }
 
 template <typename T> 
-T SimpleVector<T>::push_back(T value) {
+void SimpleVector<T>::push_back(T value) {
  arraySize = arraySize + 1;
  T *temp;
  try
@@ -158,6 +160,7 @@ T SimpleVector<T>::push_back(T value) {
  aptr = temp;
 }
 
+template <typename T> 
 T SimpleVector<T>::pop_back() {
 
  T capturedValue = aptr[arraySize - 1];
@@ -191,6 +194,7 @@ T SimpleVector<T>::pop_back() {
    return capturedValue;
 }
 
+template <typename T> 
 T SimpleVector<T>::max() {
    T maxValue = getElementAt(0);
    for(int i = 1; i < arraySize; i++){
