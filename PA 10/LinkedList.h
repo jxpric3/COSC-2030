@@ -72,6 +72,8 @@ using namespace std;
      void deleteNode(T); 
      void displayList() const; 
      void reverse();
+     int 
+
  }; 
  
  
