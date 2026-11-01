@@ -97,5 +97,16 @@ int main()
     }
     cout << "Done" << endl; 
 
+    try
+    {
+        list.deleteByIndex(1);
+        cout << "Deleted" << endl;  
+    }
+    catch (string msg)
+    {
+        cout << "Error: " << msg << endl;
+    }
+    cout << "Done" << endl; 
+
     return 0; 
 }

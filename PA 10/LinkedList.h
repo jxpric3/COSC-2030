@@ -75,6 +75,7 @@ using namespace std;
      void reverse();
      int search(T value) const;
      void insertByIndex(T value, int index);
+     void deleteByIndex(int targetIndex);
 
  }; 
  
@@ -344,4 +345,39 @@ using namespace std;
         
     }
  }
- #endif
+
+template <typename T> 
+void LinkedList<T>::deleteByIndex(int targetIndex)
+{
+  int positionCounter = 0; 
+
+  if(targetIndex < 0) 
+  {
+    throw string("Index cannot be negative.");
+  }
+  
+  ListNode<T> *nodePtr = head;
+  ListNode<T> *previousNode = nullptr;
+
+  if(targetIndex == 0 && nodePtr != nullptr) 
+  {
+    head = nodePtr->next;
+    delete nodePtr;
+    return;
+  }
+
+  while(nodePtr != nullptr)
+  {
+    if(positionCounter == targetIndex) 
+    {
+      previousNode->next = nodePtr->next;
+      delete nodePtr;
+      return;
+    }
+    previousNode = nodePtr;
+    nodePtr = nodePtr->next;
+    positionCounter++;  
+  }
+
+}
+#endif
