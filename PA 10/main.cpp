@@ -85,18 +85,26 @@ int main()
     cout << "Index of 9: " << dupeList.search(9) << endl;
     cout << "Index of 5: " << dupeList.search(5) << endl;
     
+    cout << "Testing the insertByIndex function on the list: " << endl;
     try
     {
         list.insertByIndex(42, 01);
         cout << "Inserted" << endl;
     }
-
     catch (string msg)
     {
         cout << "Error: " << msg << endl;
     }
     cout << "Done" << endl; 
+    cout << "Here is the list after inserting 42 at index 1: " << endl;
+    list.displayList();
+    cout << endl;
 
+
+
+    cout << "Testing the deleteByIndex function on the list: " << endl;
+    list.displayList();
+    cout << "Deleting node at index 1..." << endl;  
     try
     {
         list.deleteByIndex(1);
@@ -107,6 +115,9 @@ int main()
         cout << "Error: " << msg << endl;
     }
     cout << "Done" << endl; 
+    cout << "Here is the list after deleting the node at index 1: " << endl;
+    list.displayList();
+    cout << endl;   
 
     return 0; 
 }
