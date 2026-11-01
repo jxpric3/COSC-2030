@@ -73,6 +73,7 @@ using namespace std;
      void displayList() const; 
      void reverse();
      int search(T value) const;
+     void insertByIndex(T value, int index);
 
  }; 
  
@@ -299,5 +300,44 @@ using namespace std;
     }
 
     return -1; // Value not found
+ }
+
+ template <typename T> 
+ void LinkedList<T>::insertByIndex(T value, int index)
+ {
+    ListNode<T> *newNode = new ListNode<T>(value);
+    newNode->value = value;
+    newNode->next = nullptr;
+    
+    if(head == 0) 
+    {
+        head = newNode;
+        return;
+    }
+
+    if(index == 0) 
+    {
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
+
+    ListNode<T> *nodePtr = head;
+    int numberToSkip = 1; 
+    
+    while(numberToSkip <= index)
+    {
+        if(nodePtr->next == nullptr || numberToSkip == index) 
+        {
+            ListNode <T> *tempPtr = nodePtr->next;
+            nodePtr->next = newNode;
+            newNode->next = tempPtr;
+            return;
+        }
+        
+        nodePtr = nodePtr->next;
+        numberToSkip++;
+        
+    }
  }
  #endif
