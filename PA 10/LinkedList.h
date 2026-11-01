@@ -71,6 +71,7 @@ using namespace std;
      void insertNode(T); 
      void deleteNode(T); 
      void displayList() const; 
+     void reverse();
  }; 
  
  
@@ -182,6 +183,28 @@ using namespace std;
          } 
      } 
  } 
+
+ //****************************************************** 
+ // The reverseList function reverses the linked list    * 
+ //****************************************************** 
+ 
+ template <typename T> 
+  void LinkedList<T>::reverse() 
+  { 
+    ListNode<T> *nodePtr = head; 
+    ListNode<T> *prevNode = nullptr;
+    ListNode<T> *nextNode = nullptr;
+
+    while (nodePtr != nullptr) 
+    { 
+        nextNode = nodePtr->next; 
+        nodePtr->next = prevNode; 
+        prevNode = nodePtr; 
+        nodePtr = nextNode; 
+    }
+    head = prevNode; 
+    
+  }
  
  //****************************************************** 
  // The deleteNode function searches for a node         * 
