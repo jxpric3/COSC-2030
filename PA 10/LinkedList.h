@@ -72,7 +72,7 @@ using namespace std;
      void deleteNode(T); 
      void displayList() const; 
      void reverse();
-     int 
+     int search(T value) const;
 
  }; 
  
@@ -282,4 +282,22 @@ using namespace std;
          nodePtr = nextNode; 
      } 
  } 
+ template <typename T> 
+ int LinkedList<T>::search(T value) const
+ {
+    ListNode<T> *nodePtr = head;
+    int index = 0;
+
+    while (nodePtr != nullptr)
+    {
+        if (nodePtr->value == value)
+        {
+            return index;
+        }
+        nodePtr = nodePtr->next;
+        index++;
+    }
+
+    return -1; // Value not found
+ }
  #endif
