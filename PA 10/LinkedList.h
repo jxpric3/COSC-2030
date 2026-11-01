@@ -2,6 +2,7 @@
  // The node type is also a class template. 
  #ifndef LINKEDLIST_H 
  #define LINKEDLIST_H 
+ #include <iostream>
 
 using namespace std;    
  
@@ -41,8 +42,8 @@ using namespace std;
      LinkedList(const LinkedList<T>& other) 
      { 
         head = nullptr;
-        ListdNode<T>* lastPtr = nullptr; //track tyhe last node in the new list
-        ListedNode<T>* nodePtr = other.head; //our navigation pointer, starts at the head of the other list
+        ListNode<T>* lastPtr = nullptr; //track the last node in the new list
+        ListNode<T>* nodePtr = other.head; //our navigation pointer, starts at the head of the other list
 
         while(nodePtr != nullptr) 
         { 
