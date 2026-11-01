@@ -62,7 +62,7 @@ int main()
     cout << "Here is the list with duplicate values after reversing: " << endl;
     dupeList.displayList();
     cout << endl;
-    
+
     
     cout << "Testing the search function on the list: " << endl;    
     cout << "Index of 7: " << list.search(7) << endl;
@@ -85,6 +85,17 @@ int main()
     cout << "Index of 9: " << dupeList.search(9) << endl;
     cout << "Index of 5: " << dupeList.search(5) << endl;
     
+    try
+    {
+        list.insertByIndex(42, 01);
+        cout << "Inserted" << endl;
+    }
+
+    catch (string msg)
+    {
+        cout << "Error: " << msg << endl;
+    }
+    cout << "Done" << endl; 
 
     return 0; 
 }

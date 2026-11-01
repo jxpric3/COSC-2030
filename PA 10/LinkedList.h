@@ -3,6 +3,7 @@
  #ifndef LINKEDLIST_H 
  #define LINKEDLIST_H 
  #include <iostream>
+ #include <string>
 
 using namespace std;    
  
@@ -305,11 +306,14 @@ using namespace std;
  template <typename T> 
  void LinkedList<T>::insertByIndex(T value, int index)
  {
+    if(index < 0) 
+    {
+       throw string("Index cannot be negative.");
+    }
+
     ListNode<T> *newNode = new ListNode<T>(value);
-    newNode->value = value;
-    newNode->next = nullptr;
     
-    if(head == 0) 
+    if(!head) 
     {
         head = newNode;
         return;
