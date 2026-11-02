@@ -88,7 +88,7 @@ int main()
     cout << "Testing the insertByIndex function on the list: " << endl;
     try
     {
-        list.insertByIndex(42, 01);
+        list.insertByIndex(42, 1);
         cout << "Inserted" << endl;
     }
     catch (string msg)
@@ -118,6 +118,54 @@ int main()
     cout << "Here is the list after deleting the node at index 1: " << endl;
     list.displayList();
     cout << endl;   
+
+    cout << "Testing the operator[] function on the list: " << endl;
+    try
+    {
+        cout << "Value at index 0: " << list[0] << endl;
+        cout << "Value at index 1: " << list[1] << endl;
+        cout << "Value at index 2: " << list[2] << endl;
+    }
+    catch (string msg)
+    {
+        cout << "Error: " << msg << endl;
+    }
+
+    cout << "testing the operator[] function on the list with an out of bounds index: " << endl;
+    try
+    {
+        cout << "Value at index 10: " << list[10] << endl;
+    }
+    catch (string msg)
+    {   
+        cout << "Error: " << msg << endl;
+    }   
+
+    cout << "testing the operator[] function on the list with a negative index: " << endl;
+    try
+    { 
+        cout << "Value at index -1: " << list[-1] << endl;
+    }
+    catch (string msg)
+    {   
+        cout << "Error: " << msg << endl;
+    }
+
+   cout << "Testing the operator[] function with a reassignment to the list: " << endl;
+   try
+   {
+        cout << "Assigning 100 to the value." << endl;
+        list[3] = 100;
+        cout << "Value at index 3 after assignment: " << list[3] << endl;  
+        cout << "Here is the list after assignment: " << endl;
+        list.displayList();
+        cout << endl;   
+   }
+   catch (string msg)
+   {
+        cout << "Error: " << msg << endl;
+   }
+   
 
     return 0; 
 }

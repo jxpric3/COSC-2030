@@ -76,6 +76,7 @@ using namespace std;
      int search(T value) const;
      void insertByIndex(T value, int index);
      void deleteByIndex(int targetIndex);
+     T& operator[](int index);
 
  }; 
  
@@ -379,5 +380,26 @@ void LinkedList<T>::deleteByIndex(int targetIndex)
     positionCounter++;  
   }
 
+}
+
+template <typename T>
+T& LinkedList<T>::operator[](int index){
+   
+    if(index < 0) {
+      throw string("Index cannot be negative.");
+   }
+   
+    ListNode<T> *nodePtr = head;
+     int positionCounter = 0;
+    
+     while(nodePtr != nullptr) {
+          if(positionCounter == index) {
+                return nodePtr->value;
+          }
+          nodePtr = nodePtr->next;
+          positionCounter++;
+     }
+    
+     throw string("Index out of bounds.");
 }
 #endif
