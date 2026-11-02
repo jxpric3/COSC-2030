@@ -27,23 +27,30 @@ class primeChecker {
 int main()
 {
     int inputValue; 
-    cout << "Enter a positive integer: ";
+    cout << "Enter a positive integer greater than 1: ";
     cin >> inputValue;
 
     while(inputValue <= 1)
     {
-        cout << "Please enter a positive integer larger than 1: ";
+        cout << "Please enter a positive integer greater than 1: ";
         cin >> inputValue;
     }
 
     vector<int> numbers;
     int loopCounter = 1;
 
-    while(loopCounter <= inputValue)
+    while(loopCounter < inputValue)
     {
-           loopCounter++;
+        loopCounter++;
         numbers.push_back(loopCounter);
      
     }
+
+    cout << "The prime numbers between 1 and including " << inputValue << " are: ";
+    primeChecker check; 
+    for_each(numbers.begin(), numbers.end(), check);
+    cout << endl;
+
+    return 0; 
 }
     
