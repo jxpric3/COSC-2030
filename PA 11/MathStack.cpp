@@ -90,3 +90,35 @@ void MathStack::div()
     // Push quot back onto the stack. 
     push(quot); 
 }
+
+void MathStack::addAll() 
+{ 
+     int num, sum; 
+     sum = 0; // Initialize sum to 0
+ 
+    
+     while (!isEmpty()) 
+     { 
+         pop(num); 
+         sum += num; 
+     }
+     
+     // Push sum back onto the stack. 
+    push(sum); 
+}
+
+void MathStack::multAll() 
+{ 
+     int num, prod; 
+     prod = 1; // Initialize product to 1
+ 
+     
+     while (!isEmpty()) 
+     { 
+         pop(num); 
+         prod *= num; 
+     }
+     
+     // Push prod back onto the stack. 
+    push(prod); 
+}
