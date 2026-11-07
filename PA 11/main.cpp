@@ -6,7 +6,31 @@ int main()
 { 
     MathStack stack; 
     int num; 
- 
+    //push 10 and 20 onto the stack 
+    cout << "Pushing 10 and 20 onto the stack..." << endl;
+    stack.push(10);
+    stack.push(20);
+    
+
+    //Call the mult member function.
+    cout << "Calling mult()..." << endl;
+    stack.mult();
+    cout << "The product of the two values is: ";
+    stack.pop(num);
+    cout << num << endl;
+    
+    //push 10 and 20 onto the stack
+    cout << "Pushing 10 and 20 onto the stack..." << endl;
+    stack.push(10);
+    stack.push(20);
+
+    // Call the div member function.
+    cout << "Calling div()..." << endl;
+    stack.div();
+    cout << "The quotient of the two values is: ";
+    stack.pop(num);
+    cout << num << endl;
+
     // Push 10, 20, 30 and 40 onto the stack. 
     cout << "Pushing 10, 20, 30, and 40 onto the stack..." << endl;
     stack.push(10); 

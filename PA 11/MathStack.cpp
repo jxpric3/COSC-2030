@@ -81,8 +81,9 @@ void MathStack::div()
      int num, quot; 
  
      // Pop the first two values off the stack. 
-     pop(quot); 
      pop(num); 
+     pop(quot); 
+     
  
      // Divide quot by num. 
      quot /= num; 
