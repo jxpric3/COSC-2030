@@ -18,11 +18,11 @@ int main()
 
     while(userInput.empty())
     {
-        cout << "Please enter a non empty string for assessment:"; 
+        cout << "Please enter a non empty string for assessment: "; 
         getline(cin, userInput); 
     }
 
-    endIndex = userInput.length(); 
+    endIndex = userInput.length() - 1; 
 
     if(palindrome(userInput, startIndex, endIndex))
     {
