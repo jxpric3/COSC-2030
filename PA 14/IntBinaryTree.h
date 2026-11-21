@@ -52,5 +52,10 @@ public:
    {  
       return nodeCount(root);
    }
+
+   int numLeafNodes() const
+   {
+    return leafCount(root); 
+   }
 };
 #endif

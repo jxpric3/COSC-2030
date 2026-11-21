@@ -192,7 +192,7 @@ void IntBinaryTree::displayPostOrder(TreeNode *nodePtr) const
 }
 
 
-int IntBinaryTree::nodeCount(TreeNode *&nodePtr)
+int IntBinaryTree::nodeCount(TreeNode *&nodePtr) const
 {
    if(nodePtr == nullptr)
    {
@@ -201,4 +201,23 @@ int IntBinaryTree::nodeCount(TreeNode *&nodePtr)
    else{
       return 1 + nodeCount(nodePtr->left) + nodeCount(nodePtr->right); 
    }
+}
+
+int IntBinaryTree::leafCount(TreeNode *nodePtr) const
+{
+    if(nodePtr == nullptr)
+    {
+        return 0; 
+    }
+    else if(nodePtr->left == nullptr && nodePtr->right == nullptr)
+    {
+        return 1;
+    }
+    else 
+    {
+        return leafCount(nodePtr->left + leafCount(nodePtr->right));
+
+    }
+
+
 }
