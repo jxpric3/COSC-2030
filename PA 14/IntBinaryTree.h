@@ -22,7 +22,8 @@ private:
    void displayInOrder(TreeNode *) const;
    void displayPreOrder(TreeNode *) const;
    void displayPostOrder(TreeNode *) const;
-   int nodeCount(TreeNode *&); 
+   int nodeCount(TreeNode *&) const; 
+   int leafCount(TreeNode *) const; 
    
 public:
    // Constructor

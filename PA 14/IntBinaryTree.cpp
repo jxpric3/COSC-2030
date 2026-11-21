@@ -191,10 +191,6 @@ void IntBinaryTree::displayPostOrder(TreeNode *nodePtr) const
    }
 }
 
-int IntBinaryTree::numNodes()
-{
-   return nodeCount(root);
-}
 
 int IntBinaryTree::nodeCount(TreeNode *&nodePtr)
 {
