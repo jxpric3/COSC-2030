@@ -22,8 +22,11 @@ private:
    void displayInOrder(TreeNode *) const;
    void displayPreOrder(TreeNode *) const;
    void displayPostOrder(TreeNode *) const;
+   
    int nodeCount(TreeNode *&) const; 
    int leafCount(TreeNode *) const; 
+   int getHeight(TreeNode *) const; 
+   int getLevelWidth(TreeNode *, int) const; 
    
 public:
    // Constructor
@@ -56,6 +59,27 @@ public:
    int numLeafNodes() const
    {
     return leafCount(root); 
+   }
+
+   int treeHeight() const 
+   {
+    return getHeight(root);
+   }
+
+   int treeWidth() const{
+    int maxWidth = 0; 
+    int height = getHeight(root);
+
+    for(int level =1; level <- height; level++)
+    {
+        int currentWidth = getLevelWidth(root, level);
+        if(currentWidth > maxWidth)
+        {
+            maxWidth = currentWidth; 
+        }
+    }
+    return maxWidth; 
+    
    }
 };
 #endif

@@ -221,3 +221,42 @@ int IntBinaryTree::leafCount(TreeNode *nodePtr) const
 
 
 }
+
+int IntBinaryTree::getHeight(TreeNode *nodePtr) const
+{
+    if(nodePtr == nullptr)
+    {
+        return 0;
+    }
+    else
+    {
+        int leftHeight = getHeight(nodePtr->left);
+        int rightHeight = getHeight(nodePtr->right);
+
+        if(leftHeight > rightHeight)
+        {
+            return leftHeight + 1; 
+
+        }
+        else{
+            return rightHeight + 1; 
+        }
+            
+    }
+}
+
+int IntBinaryTree::getLevelWidth(TreeNode *nodePtr, int level) const
+{
+    if(nodePtr == nullptr)
+    {
+        return 0; 
+    }
+    if(level == 1)
+    {
+        return 1; 
+    }
+    else
+    {
+        return getLevelWidth(nodePtr->left, level - 1) + getLevelWidth(nodePtr->right, level -1); 
+    }
+}
