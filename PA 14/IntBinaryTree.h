@@ -22,6 +22,8 @@ private:
    void displayInOrder(TreeNode *) const;
    void displayPreOrder(TreeNode *) const;
    void displayPostOrder(TreeNode *) const;
+
+   bool search(int, TreeNode *) const; 
    
    int nodeCount(TreeNode *&) const; 
    int leafCount(TreeNode *) const; 
@@ -39,7 +41,11 @@ public:
       
    // Binary tree operations
    void insertNode(int);
-   bool searchNode(int);
+   
+   bool searchNode(int num) const
+   {
+    return search(num, root);
+   }
    void remove(int);
    
    void displayInOrder() const
@@ -66,11 +72,12 @@ public:
     return getHeight(root);
    }
 
-   int treeWidth() const{
+   int treeWidth() const
+   {
     int maxWidth = 0; 
     int height = getHeight(root);
 
-    for(int level =1; level <- height; level++)
+    for(int level =1; level <= height; level++)
     {
         int currentWidth = getLevelWidth(root, level);
         if(currentWidth > maxWidth)
@@ -79,7 +86,11 @@ public:
         }
     }
     return maxWidth; 
-    
+
    }
+
+  
+
+
 };
 #endif

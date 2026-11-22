@@ -60,20 +60,21 @@ void IntBinaryTree::destroySubTree(TreeNode *nodePtr)
 // Otherwise, it returns false.                     *
 //***************************************************
 
-bool IntBinaryTree::searchNode(int num)
+bool IntBinaryTree::search(int num, TreeNode *nodePtr) const 
 {
-   TreeNode *nodePtr = root;
-
-   while (nodePtr)
+   if(nodePtr == nullptr)
+   {return false;}
+   else if(nodePtr->value == num)
    {
-      if (nodePtr->value == num)
-         return true;
-      else if (num < nodePtr->value)
-         nodePtr = nodePtr->left;
-      else
-         nodePtr = nodePtr->right;
+    return true; 
    }
-   return false;
+   else if(num < nodePtr->value)
+   {
+    return search(num, nodePtr->left);
+   }
+   else{
+    return search(num,nodePtr->right);
+   }
 }
 
 //**********************************************
@@ -215,7 +216,7 @@ int IntBinaryTree::leafCount(TreeNode *nodePtr) const
     }
     else 
     {
-        return leafCount(nodePtr->left + leafCount(nodePtr->right));
+        return leafCount(nodePtr->left) + leafCount(nodePtr->right);
 
     }
 
